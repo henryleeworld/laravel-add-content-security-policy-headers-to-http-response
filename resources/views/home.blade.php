@@ -21,7 +21,6 @@
     </div>
 </div>
 @endsection
-
 @section('scripts')
 @parent
 <script nonce="{{ csp_nonce() }}">
