@@ -1,4 +1,4 @@
-# Laravel 10 伺服器端回應加入內容安全性原則 HTTP 標頭
+# Laravel 11 伺服器端回應加入內容安全性原則 HTTP 標頭
 
 引入 spatie 的 laravel-csp 套件來擴增伺服器端回應加入內容安全性原則 HTTP 標頭，能讓瀏覽器（代表使用者）驗證指令碼是否的確來自信任的來源。
 
@@ -35,5 +35,5 @@ $ npm run build
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/sYh9mCB.png)
+![](https://i.imgur.com/os56riw.png)
 > 用於檢測和緩解某些網站相關的攻擊類型如跨網站指令碼和資料注入

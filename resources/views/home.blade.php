@@ -21,12 +21,3 @@
     </div>
 </div>
 @endsection
-@section('scripts')
-@parent
-<script nonce="{{ csp_nonce() }}">
-    document.getElementById("logout").onclick = function() {
-        event.preventDefault();
-        document.getElementById('logout-form').submit();
-    }
-</script>
-@endsection

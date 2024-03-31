@@ -10,11 +10,9 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
-
-    <!-- Scripts -->
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    @vite(['resources/sass/app.scss'])
 </head>
 <body>
     <div id="app">
@@ -74,6 +72,15 @@
             @yield('content')
         </main>
     </div>
-    @yield('scripts')
+    <!-- Scripts -->
+    @vite(['resources/js/app.js'])
+    @auth
+    <script nonce="{{ csp_nonce() }}">
+    document.getElementById("logout").onclick = function() {
+        event.preventDefault();
+        document.getElementById('logout-form').submit();
+    }
+    </script>
+    @endauth
 </body>
 </html>
